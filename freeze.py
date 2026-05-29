@@ -3,7 +3,6 @@ from app import app, pages, CATEGORIAS
 
 app.config['FREEZER_DESTINATION'] = 'docs'
 app.config['FREEZER_BASE_URL'] = 'https://luciadiazs.github.io/entre_lineas/'
-app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['APPLICATION_ROOT'] = '/entre_lineas'
 
 freezer = Freezer(app)

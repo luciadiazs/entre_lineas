@@ -11,7 +11,6 @@ app.config.update(
     FLATPAGES_MARKDOWN_EXTENSIONS=["meta", "fenced_code", "tables"],
     FREEZER_DESTINATION=os.path.join(BASE_DIR, "docs"),
     FREEZER_BASE_URL="https://luciadiazs.github.io/entre_lineas/",
-    FREEZER_RELATIVE_URLS=True,
     APPLICATION_ROOT="/entre_lineas",
 )
 
