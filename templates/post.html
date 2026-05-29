@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}{{ post.meta.get('title', 'Análisis') }} — Entrelineas{% endblock %}
+
+{% block content %}
+<article class="post-page">
+  <div class="container post-container">
+
+    <div class="post-header">
+      <a href="{{ url_for('analisis') }}" class="back-link">← Volver a análisis</a>
+      <span class="card-categoria">{{ post.meta.get('categoria', 'General') }}</span>
+      <h1>{{ post.meta.get('title', '') }}</h1>
+      <p class="post-descripcion">{{ post.meta.get('descripcion', '') }}</p>
+      <div class="post-meta">
+        <span class="post-autor">Por {{ post.meta.get('autor', '') }}</span>
+        <span class="post-date">{{ post.meta.get('date', '') }}</span>
+      </div>
+    </div>
+
+    <div class="post-body">
+      {{ post.html | safe }}
+    </div>
+
+    <div class="post-footer">
+      <a href="{{ url_for('analisis') }}" class="btn-secondary">← Ver todos los análisis</a>
+    </div>
+
+  </div>
+</article>
+{% endblock %}

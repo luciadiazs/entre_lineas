@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Análisis — Entrelineas{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>Análisis legislativos</h1>
+    <p>Revisamos proyectos de ley con rigor y perspectiva crítica.</p>
+  </div>
+</section>
+
+<section class="analisis-section">
+  <div class="container">
+
+    <!-- FILTROS -->
+    <div class="filtros">
+      {% for cat in categorias %}
+      <a href="{{ url_for('analisis', categoria=cat) if cat != 'Todos' else url_for('analisis') }}"
+         class="filtro-btn {{ 'active' if cat == categoria_actual }}">
+        {{ cat }}
+      </a>
+      {% endfor %}
+    </div>
+
+    <!-- GRID DE POSTS -->
+    {% if posts %}
+    <div class="cards-grid">
+      {% for post in posts %}
+      <article class="card">
+        <span class="card-categoria">{{ post.meta.get('categoria', 'General') }}</span>
+        <h3 class="card-title">
+          <a href="{{ url_for('post', slug=post.path) }}">{{ post.meta.get('title', 'Sin título') }}</a>
+        </h3>
+        <p class="card-desc">{{ post.meta.get('descripcion', '') }}</p>
+        <div class="card-meta">
+          <span>{{ post.meta.get('autor', '') }}</span>
+          <span>{{ post.meta.get('date', '') }}</span>
+        </div>
+        <a href="{{ url_for('post', slug=post.path) }}" class="card-link">Leer más →</a>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-state">No hay análisis en esta categoría todavía.</p>
+    {% endif %}
+
+  </div>
+</section>
+{% endblock %}

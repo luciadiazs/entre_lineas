@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Equipo — Entrelineas{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <h1>Nuestro equipo</h1>
+    <p>Somos estudiantes y profesionales comprometidos con la transparencia legislativa y los derechos de todas las personas.</p>
+  </div>
+</section>
+
+<section class="equipo-section">
+  <div class="container">
+    <div class="equipo-grid">
+      {% for persona in team %}
+      <div class="miembro-card">
+        <div class="miembro-avatar">
+          {{ persona.name[0] }}
+        </div>
+        <h3 class="miembro-nombre">{{ persona.name }}</h3>
+        <span class="miembro-rol">{{ persona.role }}</span>
+        {% if persona.comision %}
+        <span class="miembro-comision">{{ persona.comision }}</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

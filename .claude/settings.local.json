@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /mnt/c/Users/ldiaz/Documents/GitHub/entre_lineas/content/posts)",
+      "Bash(mkdir -p /mnt/c/Users/ldiaz/Documents/GitHub/entre_lineas/static/css)",
+      "Bash(mkdir -p /mnt/c/Users/ldiaz/Documents/GitHub/entre_lineas/static/js)",
+      "Bash(mkdir -p /mnt/c/Users/ldiaz/Documents/GitHub/entre_lineas/static/img)",
+      "Bash(mkdir -p /mnt/c/Users/ldiaz/Documents/GitHub/entre_lineas/templates)"
+    ]
+  }
+}
