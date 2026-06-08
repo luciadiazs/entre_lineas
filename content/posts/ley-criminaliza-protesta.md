@@ -1,10 +1,16 @@
 title: "Proyecto de ley que criminaliza la protesta social: análisis crítico"
 date: "2025-05-10"
 categoria: "DDHH"
-autor: "Equipo Entrelineas"
+autor: "Equipo EntreLíneas"
 descripcion: "El Proyecto de Ley N° 8012/2024-CR propone ampliar el tipo penal de disturbios para sancionar con pena privativa de libertad a quienes participen en manifestaciones que interrumpan el tránsito. Analizamos sus implicancias."
+estado: "En comisión"
+fecha_presentacion: "2024-10-03"
+comision: "Comisión de Justicia y Derechos Humanos"
+proximos_pasos: "Dictamen pendiente de debate en comisión — previsto para junio 2025"
+congresista_nombre: "Alejandro Muñante Barrios"
+congresista_bancada: "Renovación Popular"
 
-El **Proyecto de Ley N° 8012/2024-CR**, presentado en octubre de 2024 por un grupo de congresistas de la bancada Renovación Popular, plantea modificar el artículo 315 del Código Penal peruano para endurecer las sanciones contra quienes participen en "disturbios" que interrumpan el tránsito vehicular o peatonal. La propuesta elevería la pena mínima de dos a cuatro años de privación de libertad y eliminaría la distinción entre organizadores y participantes espontáneos.
+El **Proyecto de Ley N° 8012/2024-CR**, presentado en octubre de 2024 por un grupo de congresistas de la bancada Renovación Popular, plantea modificar el artículo 315 del Código Penal peruano para endurecer las sanciones contra quienes participen en "disturbios" que interrumpan el tránsito vehicular o peatonal. La propuesta elevaría la pena mínima de dos a cuatro años de privación de libertad y eliminaría la distinción entre organizadores y participantes espontáneos.
 
 ## ¿Qué dice exactamente el proyecto?
 
@@ -42,4 +48,4 @@ La Comisión Interamericana de Derechos Humanos, en su resolución 1/21, tambié
 
 ## Conclusión
 
-El Proyecto de Ley N° 8012/2024-CR representa una amenaza directa al derecho de reunión y a la libertad de expresión colectiva. Su aprobación generaría un precedente regresivo que podría utilizarse selectivamente contra comunidades indígenas, organizaciones sindicales y movimientos sociales. Desde Entrelineas recomendamos su archivo y llamamos a las organizaciones de derechos humanos a pronunciarse antes del debate en comisión, previsto para junio de 2025.
+El Proyecto de Ley N° 8012/2024-CR representa una amenaza directa al derecho de reunión y a la libertad de expresión colectiva. Su aprobación generaría un precedente regresivo que podría utilizarse selectivamente contra comunidades indígenas, organizaciones sindicales y movimientos sociales. Desde EntreLíneas recomendamos su archivo y llamamos a las organizaciones de derechos humanos a pronunciarse antes del debate en comisión.

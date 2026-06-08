@@ -133,16 +133,28 @@ ul { list-style: none; }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, #fdf0f3 0%, #eef1fb 100%);
+  background:
+    linear-gradient(135deg, rgba(200,57,90,0.78) 0%, rgba(59,95,192,0.72) 100%),
+    url('/entre_lineas/static/img/fondo_congreso.jpg') center / cover no-repeat;
   padding: 6rem 1rem;
   text-align: center;
+  color: #fff;
 }
 .hero-inner { max-width: 760px; margin-inline: auto; }
 
+.hero-logo {
+  height: 90px;
+  width: auto;
+  margin: 0 auto 1.5rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: .95;
+}
+
 .hero-eyebrow {
   display: inline-block;
-  background: var(--rosa);
-  color: var(--blanco);
+  background: rgba(255,255,255,0.2);
+  color: #fff;
   font-size: .8rem;
   font-weight: 700;
   letter-spacing: .08em;
@@ -150,6 +162,7 @@ ul { list-style: none; }
   padding: .3rem .9rem;
   border-radius: 99px;
   margin-bottom: 1.25rem;
+  border: 1px solid rgba(255,255,255,0.35);
 }
 
 .hero h1 {
@@ -157,13 +170,30 @@ ul { list-style: none; }
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1.25rem;
-  color: var(--texto);
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
 .hero-sub {
   font-size: 1.1rem;
-  color: var(--texto-sub);
+  color: rgba(255,255,255,0.9);
   margin-bottom: 2rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  background: #fff;
+  color: var(--rosa);
+  padding: .75rem 1.75rem;
+  border-radius: var(--radio);
+  font-weight: 700;
+  transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.btn-hero:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
 /* ============================================================
@@ -794,6 +824,167 @@ ul { list-style: none; }
 }
 
 .contacto-icon { font-size: 1.1rem; }
+
+/* ============================================================
+   BADGE DE ESTADO
+   ============================================================ */
+.card-estado {
+  display: inline-block;
+  font-size: .75rem;
+  font-weight: 700;
+  padding: .2rem .75rem;
+  border-radius: 99px;
+  width: fit-content;
+  background: #e8f0fe;
+  color: var(--azul);
+}
+.card-estado--en-comisión,
+.card-estado--en-comision { background: #fff8e1; color: #b45309; }
+.card-estado--aprobado     { background: #e6f4ea; color: #1a7340; }
+.card-estado--archivado    { background: #f3f3f5; color: var(--texto-sub); }
+
+/* ============================================================
+   FICHA DEL PROYECTO (post.html)
+   ============================================================ */
+.ficha-proyecto {
+  background: var(--gris-bg);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--gris-borde);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ficha-bloque { }
+
+.ficha-titulo {
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--texto-sub);
+  margin-bottom: 1rem;
+}
+
+.ficha-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .85rem;
+}
+
+.ficha-item {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+.ficha-item--wide { grid-column: 1 / -1; }
+
+.ficha-label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--texto-sub);
+}
+
+.ficha-valor {
+  font-size: .95rem;
+  color: var(--texto);
+}
+
+/* Autoría */
+.ficha-autoria { border-top: 1px solid var(--gris-borde); padding-top: 1.25rem; }
+
+.autoria-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.autoria-congresista {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+
+.autoria-foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--gris-borde);
+}
+
+.autoria-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rosa), var(--azul));
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.autoria-info {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.autoria-nombre {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--texto);
+}
+
+.autoria-bancada {
+  font-size: .85rem;
+  color: var(--texto-sub);
+}
+
+.autoria-bancada-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* ============================================================
+   PROCESO LEGISLATIVO (nosotros.html)
+   ============================================================ */
+.proceso-section {
+  padding: 4.5rem 1rem;
+  background: var(--gris-bg);
+}
+
+.proceso-intro {
+  color: var(--texto-sub);
+  font-size: 1.05rem;
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.proceso-img-wrap {
+  max-width: 900px;
+  margin-inline: auto;
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+}
+
+.proceso-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* ============================================================
    RESPONSIVE — NUEVAS SECCIONES

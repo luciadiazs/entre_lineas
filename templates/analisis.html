@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Análisis — Entrelineas{% endblock %}
+{% block title %}Análisis — EntreLíneas{% endblock %}
 
 {% block content %}
 <section class="page-header">
@@ -36,6 +36,11 @@
           <span>{{ post.meta.get('autor', '') }}</span>
           <span>{{ post.meta.get('date', '') }}</span>
         </div>
+        {% if post.meta.get('estado') %}
+        <span class="card-estado card-estado--{{ post.meta.get('estado', '')|lower|replace(' ', '-') }}">
+          {{ post.meta.get('estado') }}
+        </span>
+        {% endif %}
         <a href="{{ url_for('post', slug=post.path) }}" class="card-link">Leer más →</a>
       </article>
       {% endfor %}

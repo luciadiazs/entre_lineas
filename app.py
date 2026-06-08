@@ -16,7 +16,6 @@ app.config.update(
 
 pages = FlatPages(app)
 
-# Estructura del equipo por áreas
 AREAS = [
     {
         "nombre": "Coordinación General",
@@ -61,15 +60,8 @@ AREAS = [
             {"name": "Camila Marzal", "foto": "camila-marzal.jpg"},
         ],
     },
-    {
-        "nombre": "Sin área asignada",
-        "miembros": [
-            {"name": "Camila Lira", "foto": None},
-        ],
-    },
 ]
 
-# Lista plana para compatibilidad
 TEAM = [m for area in AREAS for m in area["miembros"]]
 
 CATEGORIAS = ["Todos", "Género", "Democracia", "Medio ambiente",

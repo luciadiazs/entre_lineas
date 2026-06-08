@@ -6,10 +6,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="EntreLíneas" class="hero-logo" />
     <span class="hero-eyebrow">Observatorio Legislativo</span>
     <h1>Observamos proyectos de ley que pueden impactar en tus derechos</h1>
     <p class="hero-sub">En el Perú, los proyectos de ley avanzan rápido. Nosotros los seguimos, los analizamos y te explicamos lo que está en juego — porque lo más importante no siempre está en lo evidente... <em>sino entre líneas.</em></p>
-    <a href="{{ url_for('analisis') }}" class="btn-primary">Ver análisis</a>
+    <a href="{{ url_for('analisis') }}" class="btn-hero">Ver análisis</a>
   </div>
 </section>
 
@@ -53,6 +54,11 @@
           <span>{{ post.meta.get('autor', '') }}</span>
           <span>{{ post.meta.get('date', '') }}</span>
         </div>
+        {% if post.meta.get('estado') %}
+        <span class="card-estado card-estado--{{ post.meta.get('estado', '')|lower|replace(' ', '-') }}">
+          {{ post.meta.get('estado') }}
+        </span>
+        {% endif %}
         <a href="{{ url_for('post', slug=post.path) }}" class="card-link">Leer más →</a>
       </article>
       {% endfor %}
@@ -78,11 +84,7 @@
     </div>
     <div class="porque-visual">
       <div class="stat-box">
-        <span class="stat-num">+200</span>
-        <span class="stat-label">proyectos monitoreados</span>
-      </div>
-      <div class="stat-box">
-        <span class="stat-num">13</span>
+        <span class="stat-num">12</span>
         <span class="stat-label">integrantes</span>
       </div>
       <div class="stat-box">
