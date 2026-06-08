@@ -16,21 +16,61 @@ app.config.update(
 
 pages = FlatPages(app)
 
-TEAM = [
-    {"name": "Nicolle Soberón",   "role": "Integrante", "comision": None},
-    {"name": "Connie Pérez",       "role": "Integrante", "comision": None},
-    {"name": "Camila Marzal",      "role": "Integrante", "comision": None},
-    {"name": "Samantha Calderón",  "role": "Integrante", "comision": None},
-    {"name": "Ariana Alcedo",      "role": "Integrante", "comision": None},
-    {"name": "Cielo Briceño",      "role": "Integrante", "comision": None},
-    {"name": "Mayra Cárdenas",     "role": "Integrante", "comision": None},
-    {"name": "Claudia Tejada",     "role": "Integrante", "comision": None},
-    {"name": "Katherin Peña",      "role": "Integrante", "comision": None},
-    {"name": "Daniela Pulido",     "role": "Integrante", "comision": None},
-    {"name": "Lucía Díaz",         "role": "Integrante", "comision": None},
-    {"name": "Aaron Vega",         "role": "Integrante", "comision": None},
-    {"name": "Camila Lira",        "role": "Integrante", "comision": None},
+# Estructura del equipo por áreas
+AREAS = [
+    {
+        "nombre": "Coordinación General",
+        "miembros": [
+            {"name": "Nicolle Soberón", "foto": "nicolle-soberon.jpg"},
+            {"name": "Connie Pérez",    "foto": "connie-perez.jpg"},
+        ],
+    },
+    {
+        "nombre": "Análisis",
+        "miembros": [
+            {"name": "Daniela Pulido",    "foto": "daniela-pulido.jpg"},
+            {"name": "Lucía Díaz",        "foto": "lucia-diaz.jpg"},
+            {"name": "Samantha Calderón", "foto": "samantha-calderon.jpg"},
+            {"name": "Cielo Briceño",     "foto": "cielo-briceno.jpg"},
+            {"name": "Ariana Alcedo",     "foto": "ariana-alcedo.jpg"},
+        ],
+    },
+    {
+        "nombre": "Seguimiento",
+        "miembros": [
+            {"name": "Katherin Peña", "foto": "katherin-pena.jpg"},
+        ],
+    },
+    {
+        "nombre": "Medios",
+        "miembros": [
+            {"name": "Mayra Cárdenas", "foto": "mayra-cardenas.jpg"},
+            {"name": "Claudia Tejada", "foto": "claudia-tejada.jpg"},
+        ],
+    },
+    {
+        "nombre": "Programación",
+        "miembros": [
+            {"name": "Lucía Díaz", "foto": "lucia-diaz.jpg"},
+        ],
+    },
+    {
+        "nombre": "Relaciones Interinstitucionales y Economía",
+        "miembros": [
+            {"name": "Aaron Vega",    "foto": "aaron-vega.jpg"},
+            {"name": "Camila Marzal", "foto": "camila-marzal.jpg"},
+        ],
+    },
+    {
+        "nombre": "Sin área asignada",
+        "miembros": [
+            {"name": "Camila Lira", "foto": None},
+        ],
+    },
 ]
+
+# Lista plana para compatibilidad
+TEAM = [m for area in AREAS for m in area["miembros"]]
 
 CATEGORIAS = ["Todos", "Género", "Democracia", "Medio ambiente",
                "Pueblos indígenas", "Seguridad ciudadana", "DDHH"]
@@ -70,7 +110,12 @@ def post(slug):
 
 @app.route("/equipo/")
 def equipo():
-    return render_template("equipo.html", team=TEAM)
+    return render_template("equipo.html", areas=AREAS)
+
+
+@app.route("/nosotros/")
+def nosotros():
+    return render_template("nosotros.html")
 
 
 @app.route("/alertas/")

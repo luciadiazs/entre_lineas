@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Entrelineas{% endblock %}</title>
+  <title>{% block title %}EntreLíneas{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}" type="image/png" />
 </head>
@@ -13,16 +13,17 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="{{ url_for('index') }}" class="nav-logo">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Entrelineas" />
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="EntreLíneas" />
       </a>
       <button class="hamburger" id="hamburger" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="{{ url_for('index') }}"     class="{{ 'active' if request.endpoint == 'index' }}">Inicio</a></li>
-        <li><a href="{{ url_for('analisis') }}"  class="{{ 'active' if request.endpoint in ('analisis','post') }}">Análisis</a></li>
-        <li><a href="{{ url_for('equipo') }}"    class="{{ 'active' if request.endpoint == 'equipo' }}">Equipo</a></li>
-        <li><a href="{{ url_for('alertas') }}"   class="{{ 'active' if request.endpoint == 'alertas' }}">Alertas</a></li>
+        <li><a href="{{ url_for('index') }}"    class="{{ 'active' if request.endpoint == 'index' }}">Inicio</a></li>
+        <li><a href="{{ url_for('analisis') }}" class="{{ 'active' if request.endpoint in ('analisis','post') }}">Análisis</a></li>
+        <li><a href="{{ url_for('nosotros') }}" class="{{ 'active' if request.endpoint == 'nosotros' }}">Sobre Nosotros</a></li>
+        <li><a href="{{ url_for('equipo') }}"   class="{{ 'active' if request.endpoint == 'equipo' }}">Equipo</a></li>
+        <li><a href="{{ url_for('alertas') }}"  class="{{ 'active' if request.endpoint == 'alertas' }}">Alertas</a></li>
       </ul>
     </div>
   </nav>
@@ -36,15 +37,17 @@
   <footer class="footer">
     <div class="footer-inner">
       <a href="{{ url_for('index') }}" class="footer-logo">
-        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Entrelineas" />
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="EntreLíneas" />
       </a>
       <p class="footer-tagline">Observatorio de Proyectos de Ley</p>
       <div class="footer-links">
         <a href="https://twitter.com/entrelineas_pe" target="_blank" rel="noopener">Twitter / X</a>
         <a href="https://instagram.com/entrelineas.pe" target="_blank" rel="noopener">Instagram</a>
         <a href="https://facebook.com/entrelineas.pe" target="_blank" rel="noopener">Facebook</a>
+        <a href="mailto:entrelineas.observatorio@gmail.com">Correo</a>
       </div>
-      <p class="footer-copy">&copy; {{ 2025 }} Entrelineas. Todos los derechos reservados.</p>
+      <p class="footer-email">entrelineas.observatorio@gmail.com</p>
+      <p class="footer-copy">&copy; 2025 EntreLíneas. Todos los derechos reservados.</p>
     </div>
   </footer>
 
