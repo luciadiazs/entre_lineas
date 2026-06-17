@@ -187,8 +187,10 @@ ul { list-style: none; }
    ============================================================ */
 .que-hacemos {
   padding: 4rem 1rem;
-  background: var(--blanco);
+  background: var(--rosa);
 }
+
+.que-hacemos .section-title { color: #fff; }
 
 .qh-grid {
   display: grid;
@@ -201,10 +203,10 @@ ul { list-style: none; }
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background: var(--gris-bg);
+  background: rgba(255,255,255,0.15);
   border-radius: var(--radio);
   padding: 1.75rem;
-  border-left: 4px solid var(--rosa);
+  border-left: 4px solid rgba(255,255,255,0.6);
 }
 
 .qh-icon { font-size: 2rem; flex-shrink: 0; line-height: 1; }
@@ -213,10 +215,10 @@ ul { list-style: none; }
   font-size: 1.15rem;
   font-weight: 800;
   margin-bottom: .35rem;
-  color: var(--texto);
+  color: #fff;
 }
 
-.qh-item p { color: var(--texto-sub); font-size: .95rem; margin: 0; }
+.qh-item p { color: rgba(255,255,255,0.88); font-size: .95rem; margin: 0; }
 
 /* ============================================================
    LÍNEAS DE INVESTIGACIÓN
@@ -230,7 +232,7 @@ ul { list-style: none; }
 
 .lineas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
