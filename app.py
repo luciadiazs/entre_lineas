@@ -20,44 +20,44 @@ AREAS = [
     {
         "nombre": "Coordinación General",
         "miembros": [
-            {"name": "Nicolle Soberón", "foto": "nicolle-soberon.jpg"},
-            {"name": "Connie Pérez",    "foto": "connie-perez.jpg"},
+            {"name": "Nicolle Soberón", "foto": "nicolle-soberon.jpg", "rol": "Cofundadora y Coordinadora"},
+            {"name": "Connie Pérez",    "foto": "connie-perez.jpg",    "rol": "Cofundadora y Subcoordinadora"},
         ],
     },
     {
         "nombre": "Análisis",
         "miembros": [
-            {"name": "Daniela Pulido",    "foto": "daniela-pulido.jpg"},
-            {"name": "Lucía Díaz",        "foto": "lucia-diaz.jpg"},
-            {"name": "Samantha Calderón", "foto": "samantha-calderon.jpg"},
-            {"name": "Cielo Briceño",     "foto": "cielo-briceno.jpg"},
-            {"name": "Ariana Alcedo",     "foto": "ariana-alcedo.jpg"},
+            {"name": "Daniela Pulido",    "foto": "daniela-pulido.jpg",    "rol": "Coordinadora"},
+            {"name": "Lucía Díaz",        "foto": "lucia-diaz.jpg",        "rol": "Subcoordinadora"},
+            {"name": "Samantha Calderón", "foto": "samantha-calderon.jpg", "rol": "Miembro"},
+            {"name": "Cielo Briceño",     "foto": "cielo-briceno.jpg",     "rol": "Miembro"},
+            {"name": "Ariana Alcedo",     "foto": "ariana-alcedo.jpg",     "rol": "Miembro"},
         ],
     },
     {
         "nombre": "Seguimiento",
         "miembros": [
-            {"name": "Katherin Peña", "foto": "katherin-pena.jpg"},
+            {"name": "Katherin Peña", "foto": "katherin-pena.jpg", "rol": "Coordinadora"},
         ],
     },
     {
         "nombre": "Medios",
         "miembros": [
-            {"name": "Mayra Cárdenas", "foto": "mayra-cardenas.jpg"},
-            {"name": "Claudia Tejada", "foto": "claudia-tejada.jpg"},
+            {"name": "Mayra Cárdenas", "foto": "mayra-cardenas.jpg", "rol": "Coordinadora General"},
+            {"name": "Claudia Tejada", "foto": "claudia-tejada.jpg", "rol": "Coordinadora de Traducción"},
         ],
     },
     {
         "nombre": "Programación",
         "miembros": [
-            {"name": "Lucía Díaz", "foto": "lucia-diaz.jpg"},
+            {"name": "Lucía Díaz", "foto": "lucia-diaz.jpg", "rol": "Coordinadora"},
         ],
     },
     {
         "nombre": "Relaciones Interinstitucionales y Economía",
         "miembros": [
-            {"name": "Aaron Vega",    "foto": "aaron-vega.jpg"},
-            {"name": "Camila Marzal", "foto": "camila-marzal.jpg"},
+            {"name": "Aaron Vega",    "foto": "aaron-vega.jpg",    "rol": "Subcoordinador"},
+            {"name": "Camila Marzal", "foto": "camila-marzal.jpg", "rol": "Coordinadora"},
         ],
     },
 ]
