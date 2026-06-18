@@ -110,6 +110,14 @@ def nosotros():
     return render_template("nosotros.html")
 
 
+@app.route("/tendencias/")
+def tendencias():
+    all_posts = get_posts()
+    ejes = [c for c in CATEGORIAS if c != "Todos"]
+    conteo = {eje: len([p for p in all_posts if p.meta.get("categoria") == eje]) for eje in ejes}
+    return render_template("tendencias.html", ejes=ejes, conteo=conteo, total=len(all_posts))
+
+
 @app.route("/alertas/")
 def alertas():
     return render_template("alertas.html")

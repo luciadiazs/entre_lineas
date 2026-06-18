@@ -9,6 +9,48 @@
   </div>
 </section>
 
+<!-- TABLA DE PROYECTOS -->
+<section class="proyectos-section">
+  <div class="container">
+    <h2 class="section-title proyectos-titulo">Últimos análisis</h2>
+    {% if posts %}
+    <div class="tabla-wrap">
+      <table class="proyectos-tabla">
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Proyecto de ley</th>
+            <th>Contenido</th>
+            <th>Nivel de riesgo</th>
+            <th>Análisis</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in posts %}
+          <tr>
+            <td class="col-numero">{{ post.meta.get('numero', '—') }}</td>
+            <td class="col-titulo">{{ post.meta.get('title', '') }}</td>
+            <td class="col-contenido">{{ post.meta.get('descripcion', '') }}</td>
+            <td class="col-riesgo">
+              {% set riesgo = post.meta.get('nivel_riesgo', '') %}
+              {% if riesgo %}
+              <span class="riesgo-badge riesgo-{{ riesgo|lower }}">{{ riesgo }}</span>
+              {% else %}—{% endif %}
+            </td>
+            <td class="col-link">
+              <a href="{{ url_for('post', slug=post.path) }}" class="tabla-link">Ver →</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p class="empty-state">No hay análisis todavía.</p>
+    {% endif %}
+  </div>
+</section>
+
 <section class="analisis-section">
   <div class="container">
 

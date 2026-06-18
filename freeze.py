@@ -1,5 +1,5 @@
 from flask_frozen import Freezer
-from app import app, pages, CATEGORIAS
+from app import app, pages, CATEGORIAS, tendencias
 
 app.config['FREEZER_DESTINATION'] = 'docs'
 app.config['FREEZER_BASE_URL'] = 'https://luciadiazs.github.io/entre_lineas/'

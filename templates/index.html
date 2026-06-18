@@ -49,22 +49,22 @@
     <h2 class="section-title lineas-titulo">Nuestras líneas de investigación</h2>
     <div class="lineas-grid">
       <div class="linea-card">
-        <span class="linea-icon">🛡️</span>
+        <img src="{{ url_for('static', filename='img/ejes/blanco/seguridad_ciudadana.png') }}" alt="Seguridad ciudadana" class="linea-icon-img" />
         <h3>Seguridad ciudadana</h3>
         <p>La seguridad no puede construirse desde el miedo, el abuso o la violencia. Este eje exige protección, prevención y justicia para vivir con tranquilidad y dignidad. Porque sentirse seguro también significa poder vivir sin discriminación, abuso ni arbitrariedad.</p>
       </div>
       <div class="linea-card">
-        <span class="linea-icon">🏛️</span>
+        <img src="{{ url_for('static', filename='img/ejes/blanco/institucionalidad.png') }}" alt="Institucionalidad democrática" class="linea-icon-img" />
         <h3>Institucionalidad democrática</h3>
         <p>La democracia se erosiona cuando los poderes del Estado pierden independencia. Este eje vigila la separación de poderes, la autonomía de organismos constitucionales y los intentos de concentrar poder. Porque sin instituciones fuertes, los derechos no tienen garantía.</p>
       </div>
       <div class="linea-card">
-        <span class="linea-icon">⚧️</span>
+        <img src="{{ url_for('static', filename='img/ejes/blanco/genero.png') }}" alt="Género" class="linea-icon-img" />
         <h3>Género</h3>
         <p>Vivir sin violencia y con igualdad no debería ser una promesa vacía. Este eje exige un país donde mujeres, niñas y diversidades puedan vivir con autonomía, seguridad y derechos garantizados. Porque ninguna persona debería enfrentar discriminación o desigualdad por ser quien es.</p>
       </div>
       <div class="linea-card">
-        <span class="linea-icon">🌿</span>
+        <img src="{{ url_for('static', filename='img/ejes/blanco/medio_ambiente.png') }}" alt="Medio ambiente y pueblos indígenas" class="linea-icon-img" />
         <h3>Medio ambiente y pueblos indígenas</h3>
         <p>El desarrollo debe cuidar la vida, el agua, los territorios y el futuro que compartimos. Este eje exige compromisos reales para proteger el ambiente y garantizar condiciones dignas para las comunidades. Porque defender la naturaleza también es defender derechos.</p>
       </div>
@@ -72,38 +72,43 @@
   </div>
 </section>
 
-<!-- ÚLTIMOS ANÁLISIS -->
-<section class="ultimos-analisis">
+<!-- TABLA DE PROYECTOS -->
+<section class="proyectos-section">
   <div class="container">
-    <h2 class="section-title">Últimos análisis</h2>
+    <h2 class="section-title proyectos-titulo">Últimos análisis</h2>
     {% if posts %}
-    <div class="cards-grid">
-      {% for post in posts %}
-      <article class="card">
-        <span class="card-categoria">{{ post.meta.get('categoria', 'General') }}</span>
-        <h3 class="card-title">
-          <a href="{{ url_for('post', slug=post.path) }}">{{ post.meta.get('title', 'Sin título') }}</a>
-        </h3>
-        <p class="card-desc">{{ post.meta.get('descripcion', '') }}</p>
-        <div class="card-meta">
-          <span>{{ post.meta.get('autor', '') }}</span>
-          <span>{{ post.meta.get('date', '') }}</span>
-        </div>
-        {% if post.meta.get('estado') %}
-        <span class="card-estado card-estado--{{ post.meta.get('estado', '')|lower|replace(' ', '-') }}">
-          {{ post.meta.get('estado') }}
-        </span>
-        {% endif %}
-        <a href="{{ url_for('post', slug=post.path) }}" class="card-link">Leer más →</a>
-      </article>
-      {% endfor %}
+    <div class="tabla-wrap">
+      <table class="proyectos-tabla">
+        <thead>
+          <tr>
+            <th>Número</th>
+            <th>Proyecto de ley</th>
+            <th>Contenido</th>
+            <th>Nivel de riesgo</th>
+            <th>Análisis</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for post in posts %}
+          <tr>
+            <td class="col-numero">{{ post.meta.get('numero', '—') }}</td>
+            <td class="col-titulo">{{ post.meta.get('title', '') }}</td>
+            <td class="col-contenido">{{ post.meta.get('descripcion', '') }}</td>
+            <td class="col-riesgo">
+              {% set riesgo = post.meta.get('nivel_riesgo', '') %}
+              {% if riesgo %}
+              <span class="riesgo-badge riesgo-{{ riesgo|lower }}">{{ riesgo }}</span>
+              {% else %}—{% endif %}
+            </td>
+            <td class="col-link">
+              <a href="{{ url_for('post', slug=post.path) }}" class="tabla-link">Ver →</a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-    {% else %}
-    <p class="empty-state">Próximamente publicaremos nuestros primeros análisis.</p>
     {% endif %}
-    <div class="section-cta">
-      <a href="{{ url_for('analisis') }}" class="btn-secondary">Ver todos los análisis</a>
-    </div>
   </div>
 </section>
 
