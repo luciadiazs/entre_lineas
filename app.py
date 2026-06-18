@@ -20,24 +20,24 @@ AREAS = [
     {
         "nombre": "Coordinación General",
         "miembros": [
-            {"name": "Nicolle Soberón", "foto": "nicolle-soberon.jpg", "rol": "Cofundadora y Coordinadora"},
-            {"name": "Connie Pérez",    "foto": "connie-perez.jpg",    "rol": "Cofundadora y Subcoordinadora"},
+            {"name": "Nicolle Soberón", "foto": "nicolle-soberon.jpg", "rol": "Cofundadora y Coordinadora General"},
+            {"name": "Connie Pérez",    "foto": "connie-perez.jpg",    "rol": "Cofundadora y Coordinadora Subgeneral"},
         ],
     },
     {
         "nombre": "Análisis",
         "miembros": [
-            {"name": "Daniela Pulido",    "foto": "daniela-pulido.jpg",    "rol": "Coordinadora"},
-            {"name": "Lucía Díaz",        "foto": "lucia-diaz.jpg",        "rol": "Subcoordinadora"},
-            {"name": "Samantha Calderón", "foto": "samantha-calderon.jpg", "rol": "Miembro"},
-            {"name": "Cielo Briceño",     "foto": "cielo-briceno.jpg",     "rol": "Miembro"},
-            {"name": "Ariana Alcedo",     "foto": "ariana-alcedo.jpg",     "rol": "Miembro"},
+            {"name": "Daniela Pulido",    "foto": "daniela-pulido.jpg",    "rol": "Coordinadora General"},
+            {"name": "Lucía Díaz",        "foto": "lucia-diaz.jpg",        "rol": "Subcoordinadora General"},
+            {"name": "Samantha Calderón", "foto": "samantha-calderon.jpg", "rol": ""},
+            {"name": "Cielo Briceño",     "foto": "cielo-briceno.jpg",     "rol": ""},
+            {"name": "Ariana Alcedo",     "foto": "ariana-alcedo.jpg",     "rol": ""},
         ],
     },
     {
         "nombre": "Seguimiento",
         "miembros": [
-            {"name": "Katherin Peña", "foto": "katherin-pena.jpg", "rol": "Coordinadora"},
+            {"name": "Katherin Peña", "foto": "katherin-pena.jpg", "rol": "Coordinadora General"},
         ],
     },
     {
@@ -50,14 +50,14 @@ AREAS = [
     {
         "nombre": "Programación",
         "miembros": [
-            {"name": "Lucía Díaz", "foto": "lucia-diaz.jpg", "rol": "Coordinadora"},
+            {"name": "Lucía Díaz", "foto": "lucia-diaz.jpg", "rol": "Coordinadora General"},
         ],
     },
     {
         "nombre": "Relaciones Interinstitucionales y Economía",
         "miembros": [
-            {"name": "Aaron Vega",    "foto": "aaron-vega.jpg",    "rol": "Subcoordinador"},
-            {"name": "Camila Marzal", "foto": "camila-marzal.jpg", "rol": "Coordinadora"},
+            {"name": "Aaron Vega",    "foto": "aaron-vega.jpg",    "rol": "Subcoordinador General"},
+            {"name": "Camila Marzal", "foto": "camila-marzal.jpg", "rol": "Coordinadora General"},
         ],
     },
 ]
