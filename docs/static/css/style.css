@@ -134,8 +134,8 @@ ul { list-style: none; }
    ============================================================ */
 .hero {
   background:
-    linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
-    url('/entre_lineas/static/img/fondo_congreso.jpg') center / cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.80)),
+    url('/entre_lineas/static/img/fondo_congreso_estilizado.png') center / cover no-repeat;
   padding: 1rem 1rem 3rem;
   text-align: center;
   color: #fff;
@@ -143,11 +143,12 @@ ul { list-style: none; }
 .hero-inner { max-width: 800px; margin-inline: auto; }
 
 .hero-logo {
-  height: 300px;
+  height: 340px;
   width: auto;
-  margin: 0 auto 0.15rem;
+  margin: 0 auto -1.5rem;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.35));
 }
 
 .hero-title {
@@ -168,8 +169,8 @@ ul { list-style: none; }
 
 .btn-hero {
   display: inline-block;
-  background: #fff;
-  color: var(--rosa);
+  background: var(--rosa);
+  color: #fff;
   padding: .75rem 1.75rem;
   border-radius: var(--radio);
   font-weight: 700;
@@ -177,7 +178,7 @@ ul { list-style: none; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 .btn-hero:hover {
-  background: #f0f0f0;
+  background: #a82e4b;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
