@@ -65,7 +65,7 @@ AREAS = [
 TEAM = [m for area in AREAS for m in area["miembros"]]
 
 CATEGORIAS = ["Todos", "Género", "Democracia", "Medio ambiente",
-               "Pueblos indígenas", "Seguridad ciudadana", "DDHH"]
+               "Pueblos indígenas", "Seguridad ciudadana"]
 
 
 def get_posts(categoria=None):
