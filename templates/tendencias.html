@@ -2,9 +2,9 @@
 {% block title %}Tendencias — EntreLíneas{% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="page-header page-header--tendencias">
   <div class="container">
-    <h1>Tendencias</h1>
+    <h1>¿Cuál es el <span class="hl hl--tendencias">panorama</span>?</h1>
     <p>Proyectos de ley en el Congreso que representan un riesgo para cada uno de nuestros ejes de investigación.</p>
   </div>
 </section>
@@ -13,34 +13,24 @@
   <div class="container">
     <h2 class="section-title tendencias-titulo">¿Cuál es el panorama?</h2>
 
-    <div class="tendencias-layout">
-
-      <!-- EJES -->
-      <div class="tendencias-ejes">
-        {% for eje in ejes %}
-        <div class="eje-card">
-          <div class="eje-card-inner">
-            <span class="eje-count">{{ conteo[eje] }}</span>
-            <div class="eje-info">
-              <span class="eje-label">proyecto{{ 's' if conteo[eje] != 1 }} que afecta{{ '' if conteo[eje] != 1 else 'n' }}</span>
-              <span class="eje-nombre">{{ eje }}</span>
-            </div>
+    <div class="tendencias-ejes">
+      {% for eje in ejes %}
+      <div class="eje-card">
+        <div class="eje-card-inner">
+          <span class="eje-count">{{ conteo[eje] }}</span>
+          <div class="eje-info">
+            <span class="eje-label">proyecto{{ 's' if conteo[eje] != 1 }} que afecta{{ '' if conteo[eje] != 1 else 'n' }}</span>
+            <span class="eje-nombre">{{ eje }}</span>
           </div>
-          <a href="{{ url_for('analisis', categoria=eje) }}" class="eje-link">Ver análisis →</a>
         </div>
-        {% endfor %}
-
-        <div class="eje-total">
-          <span class="eje-total-num">{{ total }}</span>
-          <span class="eje-total-label">proyectos analizados en total</span>
-        </div>
+        <a href="{{ url_for('analisis', categoria=eje) }}" class="eje-link">Ver análisis →</a>
       </div>
+      {% endfor %}
 
-      <!-- MAPA -->
-      <div class="tendencias-mapa">
-        <img src="{{ url_for('static', filename='img/peru_mapa.png') }}" alt="Mapa del Perú" />
+      <div class="eje-total">
+        <span class="eje-total-num">{{ total }}</span>
+        <span class="eje-total-label">proyectos analizados en total</span>
       </div>
-
     </div>
   </div>
 </section>

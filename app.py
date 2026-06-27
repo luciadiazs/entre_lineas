@@ -100,6 +100,11 @@ def post(slug):
     return render_template("post.html", post=page)
 
 
+@app.route("/metodologia/")
+def metodologia():
+    return render_template("metodologia.html")
+
+
 @app.route("/equipo/")
 def equipo():
     return render_template("equipo.html", areas=AREAS)
