@@ -508,10 +508,10 @@ ul { list-style: none; }
 }
 
 /* Page-headers editoriales por pestaña */
-.page-header--analisis,
-.page-header--tendencias,
-.page-header--equipo,
-.page-header--nosotrxs,
+.page-header--analisis { background: #A9346D; }
+.page-header--tendencias { background: #A9346D; }
+.page-header--equipo { background: #A9346D; }
+.page-header--nosotrxs { background: #A9346D; }
 .page-header--alertas { background: #A9346D; }
 
 .page-header--analisis h1,   .page-header--analisis p,
@@ -831,7 +831,7 @@ ul { list-style: none; }
    ============================================================ */
 .nosotros-quienes {
   padding: 4.5rem 1rem;
-  background: var(--blanco);
+  background: var(--gris-bg);
 }
 
 .nosotros-inner {
@@ -853,7 +853,7 @@ ul { list-style: none; }
 /* Misión y Visión */
 .nosotros-mv {
   padding: 3rem 1rem;
-  background: var(--gris-bg);
+  background: #A9346D ;
 }
 
 .nosotros-mv-grid {
